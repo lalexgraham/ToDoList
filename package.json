@@ -1,0 +1,9 @@
+{
+  "name": "mongoHQ-LocalNotes",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "2.2.0",
+    "mongoose": "2.0.2"
+  }
+}
+
