@@ -5,7 +5,8 @@ var util = require('util');
 var test = require('assert');  
 var querystring = require('querystring'); 
 
-var appURL = 'http://localhost:8888';
+//var appURL = 'http://localhost:8888';
+var appURL = 'http://evening-beach-6294.herokuapp.com';
 				
 //Mongoose config
 // would like to put this in separate file like http://j-query.blogspot.com/2011/11/mongoose-and-mongohq.html
