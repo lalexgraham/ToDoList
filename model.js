@@ -1,3 +1,4 @@
+//model to abstract away from requestHanlder.js mongoose config - does not work
 var  mongoose  = require('mongoose');
 var Schema = mongoose.Schema;
 

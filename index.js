@@ -8,6 +8,4 @@ handle["/list"] = requestHandlers.list;
 handle["/add"] = requestHandlers.add;
 handle["/remove"] = requestHandlers.remove;
 
-
-
-server.start(router.route, handle);
+server.start(router.route, handle);				

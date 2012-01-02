@@ -1,15 +1,13 @@
 //Load modules  
 var http = require('http');  
 var url = require('url');
-var util = require('util');  
-var test = require('assert');  
+var util = require('util');   
 var querystring = require('querystring'); 
 
-//var appURL = 'http://localhost:8888';
-var appURL = 'http://evening-beach-6294.herokuapp.com';
+var appURL = 'http://localhost:5000';
 				
 //Mongoose config
-// would like to put this in separate file like http://j-query.blogspot.com/2011/11/mongoose-and-mongohq.html
+//(would like to put this in separate file: http://j-query.blogspot.com/2011/11/mongoose-and-mongohq.html)
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
@@ -17,9 +15,7 @@ var toDoSchema = new Schema({
    title    : String,
 });
 
-
-mongoose.connect('mongodb://lalexgraham:1502turn@staff.mongohq.com:10048/data');
-//mongoose.connect('mongodb://127.0.0.1:27017/data');
+mongoose.connect('mongodb://127.0.0.1:27017/data');
 mongoose.model('toDo', toDoSchema);
 // saves to 'todos' collection in 'data' database rather than todo
 var toDo = mongoose.model('toDo');

@@ -1,3 +1,4 @@
+// file to test working with mongoose.js
 var   sys       = require('util')
     , mongoose  = require('mongoose');
     
@@ -15,8 +16,6 @@ var toDoSchema = new Schema({
 mongoose.model('toDo', toDoSchema);
 var toDo = mongoose.model('toDo');
 
-
- console.log('2hello from mongoose.js');
 
 // create a new toDo
 var todo = new toDo({
@@ -38,15 +37,6 @@ toDo.find({}, function(err,todos) {
 	
 		
 });
- console.log('3hello from mongoose.js');
-
-/*toDo.findOne({_id:'4ee3e47ea24efc5c0d000001'},function(err,docs){
-	 //   console.log('got you' + docs);  //Remove all the documents that match!
-	docs.remove();
-	//docs.todo[0].remove();
-	docs.save();
-	});*/
-
 
 toDo.remove({_id:'4ee3e47ea24efc5c0d000001'},function(){
 	console.log('removed doc');

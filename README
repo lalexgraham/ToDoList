@@ -1,0 +1,21 @@
+Requirements:
+============
+
+To add ToDo notes  with each note contianing longlat co-ords from
+geolocation functionality
+
+
+Routes:
+=======
+
+list
+
+lists the to do note entries and presents user with form for input of todo entry
+
+add 
+
+adds the entry to the db
+
+remove
+
+removes a specific entry from the db
