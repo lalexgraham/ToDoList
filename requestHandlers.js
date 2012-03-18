@@ -4,7 +4,7 @@ var url = require('url');
 var util = require('util');   
 var querystring = require('querystring'); 
 
-var appURL = 'http://localhost:5000';
+var appURL = 'http://localhost:8888';
 				
 //Mongoose config
 //(would like to put this in separate file: http://j-query.blogspot.com/2011/11/mongoose-and-mongohq.html)
