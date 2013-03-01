@@ -1,20 +1,18 @@
-Requirements:
-============
-
-To add/list/remove ToDo notes  
+## node.js - TODO LIST 
 
 
-Routes:
-=======
 
-list
+#### Routes
 
-lists the to do note entries and presents user with form for input of todo entry
+* list = lists the to do note entries and presents user with form for input of todo entry
+* add = adds the entry to the db
+* remove = removes a specific entry from the db
 
-add 
 
-adds the entry to the db
+#### Next improvements
 
-remove
-
-removes a specific entry from the db
+* refactor code
+    - cleanup code
+    - fix routing
+    - fix mongoose
+* add jinja support

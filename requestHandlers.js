@@ -15,7 +15,7 @@ var toDoSchema = new Schema({
    title    : String,
 });
 
-mongoose.connect('mongodb://127.0.0.1:27017/data');
+mongoose.connect('mongodb://127.0.0.1:27017/todo');
 mongoose.model('toDo', toDoSchema);
 // saves to 'todos' collection in 'data' database rather than todo
 var toDo = mongoose.model('toDo');
