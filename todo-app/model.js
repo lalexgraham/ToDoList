@@ -11,10 +11,4 @@ mongoose.model('todo', toDoSchema);
 var toDo = mongoose.model('todo');
 
 
-
-//model to abstract away from requestHanlder.js mongoose config - does not work
-
-
-//exports.model = model;
-
 exports.toDo = toDo;
