@@ -23,4 +23,5 @@ foreman start
     - [ ] cleanup code
     - [X] fix routing
     - [X] fix mongoose model
+* [ ] improve integration with mongodb
 * [ ] add jinja support

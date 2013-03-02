@@ -67,7 +67,7 @@ function remove(response, request) {
 	  	docs.remove();
 	  	docs.save();
 	  
-	  	// 301 permanent redirect to list\
+	  	// 301 permanent redirect to list
 	  	response.writeHead(301, {'Location':appURL + '/list', 'Expires': (new Date).toGMTString()});
 	  	response.end();
 	});
