@@ -9,7 +9,6 @@
 foreman start
 ```
 
-
 #### Routes
 
 * list = lists the to do note entries and presents user with form for input of todo entry
