@@ -3,6 +3,13 @@
 *WORK IN PROGRESS - NOT STABLE*
 
 
+#### Usage
+
+```
+foreman start
+```
+
+
 #### Routes
 
 * list = lists the to do note entries and presents user with form for input of todo entry
@@ -12,8 +19,8 @@
 
 #### Next improvements
 
-* refactor code
-    - cleanup code
-    - fix routing
-    - fix mongoose
-* add jinja support
+* [x] refactor code
+    - [ ] cleanup code
+    - [X] fix routing
+    - [X] fix mongoose model
+* [ ] add jinja support
