@@ -8,27 +8,38 @@ var querystring = require('querystring');
 var appURL = 'http://localhost:' + port;
 		
 
-
 // Mongoose model
 var model = require("./model");
 var toDo  = model.toDo;
 
 
-
+// -----------------------------------------------------------------------------
+// FUNCITONS
+// -----------------------------------------------------------------------------
 function add(response, request) {
 	console.log("Request handler 'add' was called.");
- 	post_handler(request, function(request_data) {
- 		var todo = new toDo({
- 			title : request_data.note
- 	  	});
 
- 	  	todo.save(function(err){
- 	  		console.log("saving"+ request_data.note);
- 	  		if(!err) console.log('todoItem saved.');
- 	  	});
+ 	post_handler(request, function(request_data) {
+ 		if(request_data.note) {
+
+ 			var todo = new toDo({
+ 				title : request_data.note
+ 	  		});
+
+ 	  		todo.save(function(err){
+ 	  			console.log("Saving: " + request_data.note);
+ 	  			if(!err) console.log('todoItem saved.');
+ 	  		});
+
+ 	  		response.writeHead(301, {'Location': appURL + '/list', 'Expires': (new Date).toGMTString()});
+			response.end();
+		} 
+		else {
+			response.writeHead(404, {"Content-Type": "text/html"});
+        	response.write("Empty string");
+        	response.end();
+		}
  	});
- 	response.writeHead(301, {'Location': appURL + '/list', 'Expires': (new Date).toGMTString()});
-	response.end();
 }
 
 
@@ -43,7 +54,7 @@ function list(response) {
 		response.write('<ul>'); 
     
 		todos.forEach(function(todo) {
-			response.write('<li>' + todo.title + '&nbsp;<a href="remove?id='+todo._id+'">remove</a></li>');  
+			response.write('<li>' + todo.title + '&nbsp;<a href="remove?id='+ todo._id + '">remove</a></li>');  
 		})
 		
 		var form =  '<form action="/add" method="post">'+
@@ -59,6 +70,7 @@ function list(response) {
 
 function remove(response, request) {
 	console.log("Request handler 'remove' was called.");
+
 	parsedURL = url.parse(request.url, true);
 	console.log(' _id to remove ' + parsedURL.query['id']);
 	
