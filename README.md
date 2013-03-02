@@ -19,9 +19,9 @@ foreman start
 
 #### Next improvements
 
-* [x] refactor code
+- [ ] refactor code
     - [ ] cleanup code
-    - [X] fix routing
-    - [X] fix mongoose model
-* [ ] improve integration with mongodb
-* [ ] add jinja support
+    - [x] fix routing
+    - [x] fix mongoose model
+- [ ] improve integration with mongodb
+- [ ] add jinja support
