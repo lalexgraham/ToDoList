@@ -1,5 +1,8 @@
 ## node.js - TODO LIST 
 
+![status](http://b.repl.ca/v1/status-experiment-yellow.png "status") 
+
+
 *WORK IN PROGRESS*
 
 
